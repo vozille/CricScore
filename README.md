@@ -1,9 +1,9 @@
 # CricScore
 
-Fetches live scores from cricbuzz.
+Fetches live scores from cricbuzz. <br>
 Shows scores as a notification periodically.
 
-
+[image](https://raw.githubusercontent.com/vozille/CricScore/master/images/sample.png)
 
 ## Usage
 
