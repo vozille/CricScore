@@ -18,7 +18,6 @@ import cricbuzz
 import time
 from docopt import docopt
 
-
 while True:
     arguments = docopt(__doc__, version='1.0')
     cricbuzz.get_cricket_scores()
@@ -40,7 +39,10 @@ while True:
         except TypeError:
             message += "Did not bat"
         message += '-------------------------------------------------\n'
-    notifier = Notify.init("alert")
+    notifier = Notify.init("warning")
     notifier = Notify.Notification.new(message)
+    notifier.set_urgency(2)
     notifier.show()
-    time.sleep(int(arguments['T']))
+    time.sleep(10)
+    notifier.close()
+    time.sleep(int(arguments['T']) - 10)
